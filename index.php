@@ -12,6 +12,10 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestboook');
 ?>
+<div class="card-header bg-primary text-white d-flex justify-content-between">
+  <h3>HOME</h4>
+  <a href="form.php" class="btn btn-success">ADD</a>
+</div>
 <table width="600" border="1">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
