@@ -4,6 +4,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body class="font-mail">
+<?php
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+$res = mysqli_query($conn, 'SELECT * FROM guestboook');
+?>
     <div class="container">
         <div class="row-md-5 row-sm-12">
             <div class="col">
@@ -13,15 +22,6 @@
                         <a href="form.php" class="btn btn-success">ADD</a>
                     </div>
                     <div class="card-body">
-                        <?php
-                        $conn = mysqli_init();
-                        mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
-                        if (mysqli_connect_errno($conn))
-                        {
-                            die('Failed to connect to MySQL: '.mysqli_connect_error());
-                        }
-                        $res = mysqli_query($conn, 'SELECT * FROM guestboook');
-                        ?>
                         <table class="table">
                         <tr>
                             <th width="100"> <div align="center">Name</div></th>
