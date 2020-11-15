@@ -13,9 +13,7 @@ $comment = $_POST['comment'];
 
 
 $sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
-$sql = "DELETE FROM guestboook WHERE ID ='$id'";
-$stmt = $this->pdo->prepare($sql);
-$stmt->execute([$id]);
+
 
 
 if (mysqli_query($conn, $sql)) {
