@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
-$id = $_POST['id'];
+
 
 $sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
 $sql = "DELETE FROM guestboook WHERE id=$id";
@@ -22,11 +22,6 @@ if (mysqli_query($conn, $sql)) {
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
-if ($conn->query($sql) === TRUE) {
-    echo "Record deleted successfully";
-  } else {
-    echo "Error deleting record: " . $conn->error;
-  }
-  
+
 mysqli_close($conn);
 ?>
