@@ -22,6 +22,11 @@ if (mysqli_query($conn, $sql)) {
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
+if ($conn->query($sql) === TRUE) {
+    echo "Record deleted successfully";
+  } else {
+    echo "Error deleting record: " . $conn->error;
+  }
   
 mysqli_close($conn);
 ?>
