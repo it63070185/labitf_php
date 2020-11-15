@@ -10,14 +10,13 @@ if (mysqli_connect_errno($conn))
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
-$link = $_POST['link'];
 
 
-$sql = "INSERT INTO guestboook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
-
+$sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
+$sql = "DELETE FROM guestboook WHERE id = ?";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "Successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
