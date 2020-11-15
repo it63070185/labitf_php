@@ -36,7 +36,7 @@
                             <td><?php echo $Result['Name'];?></div></td>
                             <td><?php echo $Result['Comment'];?></td>
                             <td>
-                                <a href="insert.php?id={$Result['id']}&action=delete">DELETE</a>
+                                <a href="insert.php?id={$Result['ID']}&action=delete">DELETE</a>
                             </td>
                             </tr>
                         <?php
