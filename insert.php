@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 
 
 $sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
-$sql = "DELETE FROM guestboook WHERE id =('$name', '$comment')";
+$sql = "DELETE FROM guestboook WHERE id =(Name, Comment)";
 
 
 
