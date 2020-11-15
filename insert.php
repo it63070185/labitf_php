@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
-
+$id = $_POST['id'];
 
 $sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
 $sql = "DELETE FROM guestboook WHERE id=$id";
