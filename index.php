@@ -8,6 +8,10 @@
         <div class="row-md-5 row-sm-12">
             <div class="col">
                 <div class="card md-3 col-sm-12">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between">
+                        <h3>HOME</h4>
+                        <a href="form.php" class="btn btn-success">ADD</a>
+                    </div>
                     <div class="card-body">
                         <?php
                         $conn = mysqli_init();
@@ -18,7 +22,7 @@
                         }
                         $res = mysqli_query($conn, 'SELECT * FROM guestboook');
                         ?>
-                        <table width="100%" border="1">
+                        <table class="table">
                         <tr>
                             <th width="100"> <div align="center">Name</div></th>
                             <th width="350"> <div align="center">Comment </div></th>
