@@ -19,7 +19,7 @@
 
 
 
-                    $sql = 'DELETE FROM guestbook WHERE ID = '.$_GET['ID'].'';
+                    $sql = 'DELETE FROM guestboook WHERE ID = '.$_GET['ID'].'';
 
 
 
