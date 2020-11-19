@@ -26,7 +26,7 @@ $sql = 'DELETE FROM guestboook WHERE ID = ' . $_GET['ID'] . '';
             mysqli_close($conn);
             ?>
         </h3>
-        <a href="index.php" class="btn btn-primary mt-3">BACK</a>
+        <a href="index.php" class="btn btn-light mt-3">BACK</a>
 
     </div>
 </body>
