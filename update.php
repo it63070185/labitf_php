@@ -8,20 +8,15 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card md-3 col-sm-12">
-                    <?php
-
-                    $conn = mysqli_init();
-                    mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
-                    if (mysqli_connect_errno($conn))
-                    {
-                        die('Failed to connect to MySQL: '.mysqli_connect_error());
-                    }
+                <?php
+                    $conn = mysqli_connect('apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab');
 
                     $name = $_POST['name'];
                     $comment = $_POST['comment'];
-                    $ID = $Result['ID'];
+                    $link = $_POST['link'];
+                    $id = $_POST['id'];
 
-                    $sql = "UPDATE guestboook SET Name = '$name', Comment = '$comment' WHERE ID = '$ID'";
+                    $sql = 'UPDATE guestboook SET Name = "'.$name.'", Comment = "'.$comment.'", Link = "'.$link.'" WHERE ID = '.$id.'';
 
 
 
