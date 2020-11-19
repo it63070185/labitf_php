@@ -18,7 +18,9 @@
                                 Name:<br>
                                 <input type="text" name = "name" id="idName" class="form-control" placeholder="Enter Name"> <br>
                                 Comment:<br>
-                                <textarea rows="2" cols="20" name = "comment" id="idComment" class="form-control" placeholder="Enter Comment"></textarea><br> 
+                                <textarea rows="2" cols="20" name = "comment" id="idComment" class="form-control" placeholder="Enter Comment"></textarea><br>
+				Link:<br>
+				<input type="text" name = "link" id="idName" class="form-control" placeholder="Enter Link"> <br>
                                 <input class="btn btn-success" type="submit" id="commentBtn">
                             </form> 
                     </div>
