@@ -5,7 +5,7 @@
   <title>Comment Form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
   <div class="container">
@@ -18,7 +18,7 @@
           placeholder="Enter Comment"></textarea><br>
         <label class="m-3" for="link">Link</label>
         <input type="text" class="form-control" name="link" id="idLink" placeholder="Enter Link">
-        <input class="btn btn-primary mt-5" type="submit" id="commentBtn">
+        <input class="btn btn-success mt-5" type="submit" id="commentBtn">
       </div>
     </form>
   </div>
