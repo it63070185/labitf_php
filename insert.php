@@ -34,7 +34,7 @@
 
           mysqli_close($conn);
           ?>
-          <a href="index.php" class="btn btn-light">Back</a>
+          <a href="index.php" class="btn btn-light">Home</a>
         </div>
       </div>    
     </div>
