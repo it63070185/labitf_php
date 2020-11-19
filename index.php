@@ -37,7 +37,7 @@
                             <td><?php echo $Result['Comment'];?></td>
                             <td>
                                 <a href ="delete.php?ID=<?php echo $Result['ID'];?>" >DELETE</a>
-                                <a href ="update.php?ID=<?php echo $Result['ID'];?>" >UPDATE</a>
+                                <a href ="formup.php?ID=<?php echo $Result['ID'];?>" >UPDATE</a>
                             </td>
                             </tr>
                         <?php
