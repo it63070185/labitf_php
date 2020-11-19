@@ -5,31 +5,37 @@
 </head>
 <body class="font-mail">
   <div class="container">
-    <?php
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card md-3 col-sm-12">
+          <?php
 
-    $conn = mysqli_init();
-    mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
-    if (mysqli_connect_errno($conn))
-    {
-        die('Failed to connect to MySQL: '.mysqli_connect_error());
-    }
-
-
-    $name = $_POST['name'];
-    $comment = $_POST['comment'];
-
-
-    $sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
+          $conn = mysqli_init();
+          mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
+          if (mysqli_connect_errno($conn))
+          {
+              die('Failed to connect to MySQL: '.mysqli_connect_error());
+          }
 
 
+          $name = $_POST['name'];
+          $comment = $_POST['comment'];
 
-    if (mysqli_query($conn, $sql)) {
-        echo "Successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      }
 
-    mysqli_close($conn);
-    ?>
+          $sql = "INSERT INTO guestboook (Name , Comment) VALUES ('$name', '$comment')";
+
+
+
+          if (mysqli_query($conn, $sql)) {
+              echo "Successfully";
+            } else {
+              echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+
+          mysqli_close($conn);
+          ?>
+        </div>
+      </div>    
+    </div>
   </div>
 </body>
