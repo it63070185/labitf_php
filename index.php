@@ -37,7 +37,7 @@
                             <td><?php echo $Result['Comment'];?></td>
                             <td><?php echo $Result['ID'];?></td>
                             <td>
-                                <a href="delete.php?ID=$ID" class="btn btn-success">DELETE</a>
+                                <a href="delete.php" class="btn btn-success">DELETE</a>
                             </td>
                             </tr>
                         <?php
