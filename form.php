@@ -11,7 +11,7 @@
   <div class="container">
     <div class="card-header bg-primary text-white d-flex justify-content-between">
      <h3>ADD</h4>
-     <a href="form.php" class="btn btn-success">ADD</a>
+     <a href="index.php" class="btn btn-light">BACK</a>
     </div>
     <form action="insert.php" method="post" id="CommentForm">
       <div class="form-group mt-5">
