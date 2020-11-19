@@ -8,27 +8,21 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card md-3 col-sm-12">
-                    <?php
-
-                    $conn = mysqli_init();
+                <?php
                     mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
+                    $sql = 'DELETE FROM guestboook WHERE ID = '.$_GET['ID'].'';
+
                     if (mysqli_connect_errno($conn))
                     {
                         die('Failed to connect to MySQL: '.mysqli_connect_error());
                     }
 
-
-
-                    $sql = 'DELETE FROM guestboook WHERE ID = '.$_GET['ID'].'';
-
-
-
                     if (mysqli_query($conn, $sql)) {
-                        echo "Successfully";
+                        echo "Successfully."; 
                     } else {
                         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                     }
-
+                    
                     mysqli_close($conn);
                     ?>
                     <a href="index.php" class="btn btn-light">Home</a>
