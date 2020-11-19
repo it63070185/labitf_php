@@ -36,8 +36,8 @@
                             <td><?php echo $Result['Name'];?></div></td>
                             <td><?php echo $Result['Comment'];?></td>
                             <td>
-                                <a href="delete.php?ID=$ID" method= "post" class="btn btn-success">DELETE</a>
-                                <a href="formup.php?ID=$ID" class="btn btn-success">EDIT</a>
+                                <a href ="delete.php?ID=<?php echo $Result['ID'];?>" >DELETE</a>
+                                <a href ="update.php?ID=<?php echo $Result['ID'];?>" >UPDATE</a>
                             </td>
                             </tr>
                         <?php
