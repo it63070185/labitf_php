@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 
 
 
-$sql = "DELETE FROM guestboook WHERE ID";
+$sql = "DELETE FROM guestboook WHERE '$ID'";
 
 
 
