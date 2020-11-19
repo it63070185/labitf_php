@@ -17,7 +17,10 @@
   $res = mysqli_query($conn, 'SELECT * FROM guestboook');
   ?>
   <div class="container mt-5">
-    <h1 class="text-center">DATA</h1>
+    <div class="card-header bg-primary text-white d-flex justify-content-between">
+      <h3>HOME</h4>
+       <a href="form.php" class="btn btn-success">ADD</a>
+    </div>
     <div class="table-responsive">
       <table class="table table-hover table-bordered table-sm">
         <thead class="thead-dark">
@@ -55,9 +58,7 @@
         </tbody>
     </div>
     </table>
-  </div>
-  <a class="btn btn-primary" href="form.php">Add</a>
-  </div>
+
 
   <?php
   mysqli_close($conn);
