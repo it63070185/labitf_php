@@ -9,6 +9,10 @@
 </head>
 <body>
   <div class="container">
+    <div class="card-header bg-primary text-white d-flex justify-content-between">
+     <h3>ADD</h4>
+     <a href="form.php" class="btn btn-success">ADD</a>
+    </div>
     <form action="insert.php" method="post" id="CommentForm">
       <div class="form-group mt-5">
         <label class="m-3" for="name">Name</label>
