@@ -21,43 +21,45 @@
       <h3>HOME</h4>
        <a href="form.php" class="btn btn-success">ADD</a>
     </div>
-    <div class="table-responsive">
-      <table class="table table-hover table-bordered table-sm">
-        <thead class="thead-dark">
-          <tr>
-            <th width="300">
-              <div align="center">Name</div>
-            </th>
-            <th width="300">
-              <div align="center">Comment </div>
-            </th>
-            <th width="300">
-              <div align="center">Link </div>
-            </th>
-            <th width="300">
-              <div align="center">Action</div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          while ($Result = mysqli_fetch_array($res)) {
-          ?>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered table-sm">
+          <thead class="thead-dark">
             <tr>
-              <td><?php echo $Result['Name']; ?></td>
-              <td><?php echo $Result['Comment']; ?></td>
-              <td><?php echo $Result['Link']; ?></td>
-              <td>
-                <a class="btn btn-success" href="edit.php?ID=<?php echo $Result['ID']; ?>">EDIT</a>
-                <a class="btn btn-danger" href="delete.php?ID=<?php echo $Result['ID']; ?>">DELETE</a>
-              </td>
+              <th width="300">
+                <div align="center">Name</div>
+              </th>
+              <th width="300">
+                <div align="center">Comment </div>
+              </th>
+              <th width="300">
+                <div align="center">Link </div>
+              </th>
+              <th width="300">
+                <div align="center">Action</div>
+              </th>
             </tr>
-          <?php
-          }
-          ?>
-        </tbody>
-    </div>
-    </table>
+          </thead>
+          <tbody>
+            <?php
+            while ($Result = mysqli_fetch_array($res)) {
+            ?>
+              <tr>
+                <td><?php echo $Result['Name']; ?></td>
+                <td><?php echo $Result['Comment']; ?></td>
+                <td><?php echo $Result['Link']; ?></td>
+                <td>
+                  <a class="btn btn-success" href="edit.php?ID=<?php echo $Result['ID']; ?>">EDIT</a>
+                  <a class="btn btn-danger" href="delete.php?ID=<?php echo $Result['ID']; ?>">DELETE</a>
+                </td>
+              </tr>
+            <?php
+            }
+            ?>
+          </tbody>
+          </div>
+       </div>
+      </table>
 
 
   <?php
