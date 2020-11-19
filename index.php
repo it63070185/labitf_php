@@ -5,8 +5,8 @@
 </head>
 <body class="font-mail">
     <div class="container">
-        <div class="row-md-5 row-sm-12">
-            <div class="col">
+        <div class="row">
+            <div class="col-sm-4">
                 <div class="card md-3 col-sm-12">
                     <div class="card-header bg-primary text-white d-flex justify-content-between">
                         <h3>HOME</h4>
@@ -36,8 +36,7 @@
                             <td><?php echo $Result['Name'];?></div></td>
                             <td><?php echo $Result['Comment'];?></td>
                             <td>
-                                <a href="insert.php?id={$Result['ID']}&action=delete">DELETE</a>
-                                <a href="form.php?id={$Result['ID']}&action=edit">EDIT</a>
+                                <a href="delete.php?ID=$ID" class="btn btn-success">DELETE</a>
                             </td>
                             </tr>
                         <?php
