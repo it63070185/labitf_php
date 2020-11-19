@@ -1,3 +1,16 @@
+<?php
+    $conn = mysqli_real_connect($conn, 'apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab', 3306);
+
+    $id = $_GET['ID'];
+
+    $sql = 'SELECT * FROM guestboook WHERE ID = ' . $id . '';
+    $query = mysqli_query($conn, $sql);
+    if (!$query) {
+        header('Location: index.php');
+    } else {
+        $data = mysqli_fetch_assoc($query);
+    }
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +28,11 @@
                     </div>
                     <div class="card-body">
                           <form action = "update.php" method = "post" id="CommentForm" >
-                                Name:<br>
-                                <input type="text" name = "name" id="idName" class="form-control" placeholder="Enter Name"> <br>
-                                Comment:<br>
-                                <textarea rows="2" cols="20" name = "comment" id="idComment" class="form-control" placeholder="Enter Comment"></textarea><br> 
+                                <input type="text" name="id" value="<?php echo $data['ID']; ?>" class="form-control d-none" required>
+                                <label class="m-3" for="name">Name</label>
+                                <input type="text" class="form-control" name="name" id="idName" value="<?php echo $data['Name'];?>">
+                                <label class="m-3" for="comment">Comment</label>
+                                <textarea rows="5" class="form-control" cols="20" name="comment" id="idComment" ><?php echo $data['Comment'];?></textarea><br> 
                                 <input class="btn btn-success" type="submit" id="commentBtn">
                             </form> 
                     </div>
