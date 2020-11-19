@@ -35,10 +35,9 @@
                             <tr>
                             <td><?php echo $Result['Name'];?></div></td>
                             <td><?php echo $Result['Comment'];?></td>
-                            <td><?php echo $Result['ID'];?></td>
                             <td>
                                 <a href="delete.php?ID=$ID" class="btn btn-success">DELETE</a>
-                                <a href="formup.php?ID=$ID" class="btn btn-success">DELETE</a>
+                                <a href="formup.php?ID=$ID" class="btn btn-success">EDIT</a>
                             </td>
                             </tr>
                         <?php
