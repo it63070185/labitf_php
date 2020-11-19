@@ -23,6 +23,10 @@
 
   <body>
       <div class="container">
+          <div class="card-header bg-primary text-white d-flex justify-content-between">
+           <h3>EDIT</h3>
+           <a href="index.php" class="btn btn-light">BACK</a>
+          </div>
           <form action="update.php" method="post" id="CommentForm">
               <div class="form-group mt-5">
                   <input type="text" name="id" value="<?php echo $data['ID']; ?>" class="form-control d-none" required>
