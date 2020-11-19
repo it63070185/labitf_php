@@ -7,10 +7,10 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
+$ID = $Result['ID'];
 
 
-
-$sql = "DELETE FROM guestboook WHERE '$ID'";
+$sql = "DELETE FROM guestboook WHERE ID='$ID'";
 
 
 
