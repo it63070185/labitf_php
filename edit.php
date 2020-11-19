@@ -1,9 +1,9 @@
 <?php
-    $conn = mysqli_connect('database-itf.mysql.database.azure.com', 'it63070183@database-itf', 'YYWfcx51', 'ITFlab');
+    $conn = mysqli_connect('apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab');
 
     $id = $_GET['ID'];
 
-    $sql = 'SELECT * FROM guestbook WHERE ID = ' . $id . '';
+    $sql = 'SELECT * FROM guestboook WHERE ID = ' . $id . '';
     $query = mysqli_query($conn, $sql);
     if (!$query) {
         header('Location: index.php');
