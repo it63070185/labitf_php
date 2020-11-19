@@ -17,10 +17,9 @@
                         die('Failed to connect to MySQL: '.mysqli_connect_error());
                     }
 
-                    $ID = $_POST['ID'];
 
 
-                    $sql = "DELETE FROM guestboook WHERE ID='$ID' ORDER BY ID DESC LIMIT 1";
+                    $sql = 'DELETE FROM guestbook WHERE ID = '.$_GET['ID'].'';
 
 
 
