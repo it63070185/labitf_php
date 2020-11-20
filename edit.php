@@ -1,9 +1,9 @@
 <?php
-    $conn = mysqli_connect('apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab');
+    $conn = mysqli_connect('itflab0263070036.mysql.database.azure.com', 'Chinnatad@itflab0263070036', 'HIVlyv86', 'itflab');
 
     $id = $_GET['ID'];
 
-    $sql = 'SELECT * FROM guestboook WHERE ID = ' . $id . '';
+    $sql = 'SELECT * FROM guestbook WHERE ID = ' . $id . '';
     $query = mysqli_query($conn, $sql);
     if (!$query) {
         header('Location: index.php');
@@ -23,9 +23,9 @@
 
   <body>
       <div class="container">
-          <div class="card-header bg-primary text-white d-flex justify-content-between">
+          <div class="card-header bg-success text-white d-flex justify-content-between">
            <h3>EDIT</h3>
-           <a href="index.php" class="btn btn-light">BACK</a>
+           <a href="index.php" class="btn btn-danger">BACK</a>
           </div>
           <form action="update.php" method="post" id="CommentForm">
               <div class="form-group mt-5">
@@ -36,7 +36,7 @@
                   <textarea rows="5" class="form-control" cols="20" name="comment" id="idComment" ><?php echo $data['Comment'];?></textarea><br>
                   <label class="m-3" for="link">Link</label>
                   <input type="text" class="form-control" name="link" id="idLink" value="<?php echo $data['Link'];?>">
-                  <input class="btn btn-primary mt-5" type="submit" id="commentBtn">
+                  <input class="btn btn-success mt-5" type="submit" id="commentBtn">
               </div>
           </form>
       </div>
